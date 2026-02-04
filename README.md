@@ -180,19 +180,13 @@ Prediction on New Data
 
 ---
 
-## ⚠️ Disclaimer
-This project is intended for **educational and analytical purposes only** and should not be used as a standalone HR decision system without expert validation.
-
----
-
-## 👤 Author
-**Vaibhav Pattanashhetti**  
-B.Tech – Computer Engineering  
-Interested in **Machine Learning, Data Analytics, and Applied AI**
+## 📚 Key Learnings
+- Built an end-to-end ML pipeline from raw data to predictions
+- Handled mixed-type real-world datasets (numerical + categorical)
+- Compared multiple regression and classification models
+- Learned to reduce overfitting using regularization and tuning
+- Understood trade-offs between model complexity and generalization
 
 ---
 
 ⭐ If you find this project useful, consider starring the repository!
-
-## 🔄 Project Workflow
-

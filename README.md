@@ -6,16 +6,6 @@ This project demonstrates an **end-to-end ML pipeline**, including **data prepro
 
 ---
 
-## 🚀 Project Highlights
-- 📈 **Salary (Package) Prediction** using regression models
-- 🧑‍💼 **Role / Designation Prediction** using classification models
-- 🧹 Real-world **data cleaning & preprocessing**
-- 📊 Detailed **EDA and feature analysis**
-- 🔍 Model comparison using industry-standard metrics
-- 🎯 Focus on **generalization and model interpretability**
-
----
-
 ## 📌 Project Overview
 
 Organizations often struggle to:
@@ -27,6 +17,15 @@ This project uses **machine learning techniques** to analyze employee data and:
 - Predict **salary packages**
 - Recommend **appropriate job roles**
 - Assist **HR decision-making** using data-driven insights
+
+---
+
+## 📊 Key Results
+
+| Task | Model | Performance |
+|----|----|----|
+| Salary Prediction | Linear / Ridge | R² ≈ 0.90 |
+| Role Prediction | Tuned Decision Tree | ~71% Accuracy |
 
 ---
 
@@ -87,9 +86,6 @@ Prediction on New Data
 
 ---
 
-
----
-
 ## 🧹 Data Preprocessing
 
 - Dropped non-informative columns (IDs, names, dates)
@@ -127,7 +123,8 @@ Prediction on New Data
 
 ### 🔹 Classification Models (Role Prediction)
 - Decision Tree Classifier
-- Hyperparameter tuning using GridSearchCV
+- Random Forest
+- Support Vector Machine (SVM)
 
 ---
 
@@ -159,24 +156,6 @@ Prediction on New Data
 - Initial Decision Tree showed overfitting
 - Improved performance after **hyperparameter tuning**
 - Balanced evaluation using **macro & weighted averages**
-
----
-
-## 🔍 Key Insights
-
-- Experience and productivity strongly influence salary
-- Certain skills significantly impact compensation
-- Overfitting can occur without proper tuning
-- Regularization improves model stability
-- Feature selection improves classification accuracy
-
----
-
-## 🔮 Future Improvements
-- Add ensemble models (Random Forest, XGBoost)
-- Deploy as a web application for HR teams
-- Add explainability using SHAP / feature importance
-- Extend dataset with real organizational data
 
 ---
 

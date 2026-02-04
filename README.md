@@ -70,19 +70,21 @@ This project uses **machine learning techniques** to analyze employee data and:
 
 ## 🔄 Project Workflow
 
-- **Data Collection**
-  ↓
-- **Data Cleaning & Preprocessing**
-  ↓
-- **Exploratory Data Analysis (EDA)**
-  ↓
-- **Feature Engineering**
-  ↓
-- **Model Training**
-  ↓
-- **Model Evaluation & Comparison**
-  ↓
-- **Prediction on New Data**
+```text
+Data Collection
+        ↓
+Data Cleaning & Preprocessing
+        ↓
+Exploratory Data Analysis (EDA)
+        ↓
+Feature Engineering
+        ↓
+Model Training
+        ↓
+Model Evaluation & Comparison
+        ↓
+Prediction on New Data
+```
 
 ---
 

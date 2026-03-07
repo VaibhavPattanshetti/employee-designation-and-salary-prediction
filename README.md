@@ -122,10 +122,3 @@ employee-designation-and-salary-prediction/
 ```
 
 ---
-
-## 👨‍💻 Author
-
-**Vaibhav Pattanshetti**
-- GitHub: [@VaibhavPattanshetti](https://github.com/VaibhavPattanshetti)
-- B.Tech Computer Engineering Student (CS'27) at PCCOE
-- Aspiring AI & ML Enthusiast

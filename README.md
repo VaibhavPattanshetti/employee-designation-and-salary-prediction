@@ -7,7 +7,7 @@ This project allows HR professionals, students, and enthusiasts to **estimate po
 
 ## 🔗 Live Demo
 
-Try the live app here: 👉 [Employee Designation & Salary Prediction App](#) *(replace with your Streamlit URL after deployment)*
+Try the live app here: 👉 [Employee Designation & Salary Prediction App](https://employee-designation-and-salary-prediction-4dxracux9jersbac2xl.streamlit.app/)
 
 ---
 

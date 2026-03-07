@@ -23,6 +23,15 @@ This web app takes in employee details like age, gender, experience, education, 
 
 ---
 
+## 📊 Key Results
+
+| Task | Model | Performance on test data |
+|----|----|----|
+| Salary Prediction | Lasso | R² ≈ 0.90 |
+| Role Prediction | SVM | ~71% Accuracy |
+
+---
+
 ## 🗃️ Dataset
 
 The model was trained on a custom **Employee Dataset** (`employee_dataset.csv`) included in this repository.

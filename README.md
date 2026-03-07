@@ -129,6 +129,12 @@ docker run -p 8501:8501 justvaibhav/employee-predictor:latest
 
 Then open http://localhost:8501 in your browser.
 
+**Or Build Locally**
+```bash
+docker build -t employee-predictor .
+docker run -p 8501:8501 employee-predictor
+```
+
 Docker Hub image here: 👉 [justvaibhav/employee-predictor](https://hub.docker.com/r/justvaibhav/employee-predictor)
 
 ---

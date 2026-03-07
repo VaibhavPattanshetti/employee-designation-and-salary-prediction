@@ -80,6 +80,7 @@ The model was trained on a custom **Employee Dataset** (`employee_dataset.csv`) 
 5. Saved the models as pickle (`.pkl`) files for deployment
 
 **Additional Info:**
+- Multiple ML models were trained and evaluated; Lasso Regression and SVM (RBF Kernel) were selected as the best performing models for salary and designation prediction respectively.
 - This repository includes the training notebook: `Notebook.ipynb`
 - Trained models (`lasso_model.pkl`, `svm_model.pkl`) are included for direct use
 - App falls back to rule-based estimation if model files are unavailable

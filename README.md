@@ -1,173 +1,131 @@
-# 📊 Suitable Package & Role Prediction using Machine Learning
+# 📊 Employee Designation & Salary Prediction
 
-A **machine learning–based employee analytics system** that predicts **salary packages and suitable job roles/designations** based on employee productivity, experience, skills, and performance metrics.
-
-This project demonstrates an **end-to-end ML pipeline**, including **data preprocessing, EDA, feature engineering, multiple regression and classification models, evaluation, and comparison**.
-
----
-
-## 📌 Project Overview
-
-Organizations often struggle to:
-- Estimate **fair salary packages**
-- Assign **suitable roles/designations**
-- Evaluate employees objectively based on multiple factors
-
-This project uses **machine learning techniques** to analyze employee data and:
-- Predict **salary packages**
-- Recommend **appropriate job roles**
-- Assist **HR decision-making** using data-driven insights
+A **machine learning-based web application** to predict **employee salary** and **job designation** based on personal, professional, and performance-related factors.
+This project allows HR professionals, students, and enthusiasts to **estimate potential salary and designation** and make **data-driven decisions**.
 
 ---
 
-## 📊 Key Results
+## 🔗 Live Demo
 
-| Task | Model | Performance |
-|----|----|----|
-| Salary Prediction | Linear / Ridge | R² ≈ 0.90 |
-| Role Prediction | Tuned Decision Tree | ~71% Accuracy |
+Try the live app here: 👉 [Employee Designation & Salary Prediction App](#) *(replace with your Streamlit URL after deployment)*
 
 ---
 
-## 🗂 Dataset
+## 📖 Project Description
 
-**Type:** Structured tabular employee dataset  
+Efficient employee productivity analysis helps in:
 
-### Key Features:
+- **Predicting salary** based on experience, skills, education, and performance.
+- **Predicting job designation** based on salary, experience, and productivity score.
+- **Supporting HR decisions** with ML-powered insights.
+
+This web app takes in employee details like age, gender, experience, education, skills, department, and performance metrics, then predicts the **expected salary** and **job designation**.
+
+---
+
+## 🗃️ Dataset
+
+The model was trained on a custom **Employee Dataset** (`employee_dataset.csv`) included in this repository.
+
+**Dataset Features:**
+
 - Age
-- Gender
-- Department
-- Designation
+- Gender (Male/Female)
+- Designation (Junior, Executive, Lead, Senior, Manager)
 - Experience (Years)
-- Skillset
-- Productivity Score
-- Performance Rating
-- Education Level
-- Work Location
+- Productivity Score (1–100)
+- Education Level (High School, Bachelor, Master, PhD)
+- Performance Rating (1–5)
 - Last Promotion Year
-- Salary (Target variable for regression)
+- Work Location (Bangalore, Chennai, Delhi, Hyderabad, Kolkata, Mumbai, Noida, Pune)
+- Department (Finance, HR, IT, Marketing, Operations, Sales)
+- Skillset (20 skills including Python, SQL, Data Analysis, etc.)
 
-### Dataset Characteristics:
-- Real-world noisy data
-- Missing values
-- Categorical + numerical features
-- Presence of outliers
-
----
-
-## 🛠 Tech Stack
-
-| Category | Tools |
-|--------|------|
-| Language | Python |
-| Data Analysis | NumPy, Pandas |
-| Visualization | Matplotlib, Seaborn |
-| Machine Learning | Scikit-learn |
-| Feature Engineering | Encoding, Scaling |
-| Platform | Jupyter Notebook / Google Colab |
+**Target Variables:**
+- Salary (Regression)
+- Designation (Classification)
 
 ---
 
-## 🔄 Project Workflow
+## 🤖 Machine Learning Models
 
-```text
-Data Collection
-        ↓
-Data Cleaning & Preprocessing
-        ↓
-Exploratory Data Analysis (EDA)
-        ↓
-Feature Engineering
-        ↓
-Model Training
-        ↓
-Model Evaluation & Comparison
-        ↓
-Prediction on New Data
+### 💰 Salary Prediction
+- **Model Used:** Lasso Regression
+- **Why Lasso?**
+  - Handles feature selection automatically
+  - Reduces overfitting via regularization
+  - Works well with high-dimensional data (40 features)
+
+### 🏷️ Designation Prediction
+- **Model Used:** SVM (RBF Kernel)
+- **Why SVM?**
+  - Effective for multi-class classification
+  - Works well on small to medium datasets
+  - RBF kernel handles non-linear boundaries
+
+**Steps followed:**
+1. Preprocessed the dataset (handled categorical and numerical features)
+2. Applied Ordinal Encoding, One-Hot Encoding, and MultiLabelBinarizer
+3. Split into train/test sets
+4. Trained Lasso Regression and SVM models
+5. Saved the models as pickle (`.pkl`) files for deployment
+
+**Additional Info:**
+- This repository includes the training notebook: `Notebook.ipynb`
+- Trained models (`lasso_model.pkl`, `svm_model.pkl`) are included for direct use
+- App falls back to rule-based estimation if model files are unavailable
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python
+- **Frontend:** Streamlit
+- **ML Libraries:** Scikit-learn, NumPy, Pandas
+- **Model Serialization:** Joblib
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/VaibhavPattanshetti/employee-designation-and-salary-prediction.git
+cd employee-designation-and-salary-prediction
+```
+
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Run the app**
+```bash
+streamlit run app.py
 ```
 
 ---
 
-## 🧹 Data Preprocessing
+## 📁 Project Structure
 
-- Dropped non-informative columns (IDs, names, dates)
-- Handled missing values:
-  - Numerical → Mean imputation
-  - Categorical → Mode imputation
-- Removed duplicate records
-- Outlier analysis using **IQR method**
-- Converted categorical variables using:
-  - Label Encoding
-  - One-Hot Encoding
-  - Ordinal Encoding
-- Skillset processing using **MultiLabelBinarizer**
-
----
-
-## 📊 Exploratory Data Analysis (EDA)
-
-- Distribution analysis of numerical features
-- Boxplots for outlier detection
-- Correlation heatmap for feature relationships
-- Categorical feature distribution using bar & pie charts
-- Salary distribution and skewness analysis
+```
+employee-designation-and-salary-prediction/
+├── app.py                  # Main Streamlit application
+├── lasso_model.pkl         # Trained Lasso Regression model
+├── svm_model.pkl           # Trained SVM model
+├── employee_dataset.csv    # Dataset used for training
+├── Notebook.ipynb          # Training notebook
+├── requirements.txt        # Python dependencies
+├── .gitignore              # Git ignore file
+├── LICENSE                 # MIT License
+└── README.md               # Project documentation
+```
 
 ---
 
-## 📈 Machine Learning Models
+## 👨‍💻 Author
 
-### 🔹 Regression Models (Salary Prediction)
-- Multiple Linear Regression
-- Polynomial Regression
-- Ridge Regression
-- Lasso Regression
-- ElasticNet Regression
-
-### 🔹 Classification Models (Role Prediction)
-- Decision Tree Classifier
-- Random Forest
-- Support Vector Machine (SVM)
-
----
-
-## 🧮 Evaluation Metrics
-
-### Regression Metrics:
-- **R² Score**
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Root Mean Squared Error (RMSE)
-
-### Classification Metrics:
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Confusion Matrix
-
----
-
-## 🏆 Model Performance Summary
-
-### 🔹 Regression Results
-- Best models achieved **~90% R² score**
-- Consistent training and testing performance
-- Low MAE and RMSE → good generalization
-
-### 🔹 Classification Results
-- Initial Decision Tree showed overfitting
-- Improved performance after **hyperparameter tuning**
-- Balanced evaluation using **macro & weighted averages**
-
----
-
-## 📚 Key Learnings
-- Built an end-to-end ML pipeline from raw data to predictions
-- Handled mixed-type real-world datasets (numerical + categorical)
-- Compared multiple regression and classification models
-- Learned to reduce overfitting using regularization and tuning
-- Understood trade-offs between model complexity and generalization
-
----
-
-⭐ If you find this project useful, consider starring the repository!
+**Vaibhav Pattanshetti**
+- GitHub: [@VaibhavPattanshetti](https://github.com/VaibhavPattanshetti)
+- B.Tech Computer Engineering Student (CS'27) at PCCOE
+- Aspiring AI & ML Enthusiast

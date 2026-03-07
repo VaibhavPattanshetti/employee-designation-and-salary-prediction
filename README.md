@@ -117,16 +117,19 @@ streamlit run app.py
 
 ## 🐳 Docker
 
-### Pull and run from Docker Hub
+1. **Pull image from Docker Hub**
+```bash
 docker pull justvaibhav/employee-predictor:latest
+```
 
+2. **runs/starts the downloaded image as a container**
+```bash
 docker run -p 8501:8501 justvaibhav/employee-predictor:latest
+```
 
 Then open http://localhost:8501 in your browser.
 
-
-## 🐳 Docker Hub
-👉 [justvaibhav/employee-predictor](https://hub.docker.com/r/justvaibhav/employee-predictor)
+Docker Hub image here: 👉 [justvaibhav/employee-predictor](https://hub.docker.com/r/justvaibhav/employee-predictor)
 
 ---
 

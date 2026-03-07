@@ -119,15 +119,11 @@ streamlit run app.py
 
 ### Pull and run from Docker Hub
 docker pull justvaibhav/employee-predictor:latest
+
 docker run -p 8501:8501 justvaibhav/employee-predictor:latest
 
 Then open http://localhost:8501 in your browser.
 
-### Or build locally
-docker build -t employee-predictor .
-docker run -p 8501:8501 employee-predictor
-
----
 
 ## 🐳 Docker Hub
 👉 [justvaibhav/employee-predictor](https://hub.docker.com/r/justvaibhav/employee-predictor)
